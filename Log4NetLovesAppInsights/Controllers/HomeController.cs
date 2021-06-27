@@ -16,14 +16,14 @@ namespace Log4NetLovesAppInsights.Controllers
 
         public IActionResult Index()
         {
-            logger.Info("/Index");
+            logger.Info("/Index from Docker!");
 
             return View();
         }
 
         public IActionResult Privacy()
         {
-            logger.Warn("Warn! Privacy zone!");
+            logger.Warn("Warn! Privacy zone from Docker!");
 
             return View();
         }
@@ -31,7 +31,7 @@ namespace Log4NetLovesAppInsights.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            logger.Error("Error action");
+            logger.Error("Error action from Docker");
 
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
